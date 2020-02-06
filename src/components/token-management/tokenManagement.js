@@ -2,14 +2,18 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import OTP from 'otp-client';
 import ProgressCircle from 'react-native-progress-circle';
- 
+
+/**
+* This key must be stored using good practices of security
+* Put here just for study purposes
+**/
 const secret = 'TPQDAHVBZ5NBO5LFEQKC7V7UPATSSMFY';
 const otpOptions = {
     algorithm: "sha256",
     digits: 6,
     period: 30
   }
-  const otp = new OTP(secret,otpOptions);
+const otp = new OTP(secret,otpOptions);
 const currentPeriod = 10;
 export default class TokenManagement extends Component {
 
